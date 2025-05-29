@@ -2,16 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Run Python') {
             steps {
-                // Run the Python code
-               bat 'javac HelloWorld.java'
+                echo 'Running Python Code...'
+                sh '"C:\\Users\\PMLS\\Anaconda3\\python.exe" pythonfile.py'
             }
         }
-        stage('Run') {
-            steps {
-               bat 'java HelloWorld'
-            }
+
         }
-    }
 }
